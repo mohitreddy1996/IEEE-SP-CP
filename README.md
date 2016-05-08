@@ -86,7 +86,7 @@ Duration : 9-10 Weeks.
 -After each Topic discussion, few good problems will be discussed from SPOJ, Codeforces and Codechef.
 
 
--Grand contest. ACM/ICPC Style (Probably last week).
+-Grand contest. ACM-ICPC Style (Probably last week).
 
--hackerrank Tshirts for the winning team from 1st year. Will be working with Webclub for this. All the year students can take part.
+-Hackerrank Tshirts for the winning team from 1st year. Will be working with Webclub for this. This will be a Public contest. Anyone can take part. 
 
