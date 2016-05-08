@@ -85,6 +85,10 @@ Duration : 9-10 Weeks.
 
 -After each Topic discussion, few good problems will be discussed from SPOJ, Codeforces and Codechef.
 
+- All the Sessions will be held on #IEEE-SP-CP
+
+- Few hangouts sessions might be there.
+
 
 -Grand contest. ACM-ICPC Style (Probably last week).
 
