@@ -1,0 +1,96 @@
+there could be a contest this weekend 
+9:29 PM kind of icpc style.
+9:29 PM teams of 3 
+9:29 PM and good problem setters.
+9:31 PM → varsh and aswanth joined  ⇐ aditya_a quit  
+
+9:35 PM M<mohitreddy1996> mohit reddy 
+okay so lets start
+9:36 PM i guess graphs was taught in the last session
+9:36 PM So trees are special graphs only.
+9:37 PM So segment means partitions.
+9:37 PM They are mostly used to store data related to segments or intervals.
+9:38 PM So lets say 
+9:38 PM we have an array
+9:38 PM And there are many queries and updated 
+9:38 PM updates.
+9:38 PM → aditya joined (75d5ff02@gateway/web/freenode/ip.117.213.255.2)
+
+9:38 PM M<mohitreddy1996> mohit reddy 
+Say the query is i need max of the elements in the range [i,j]
+9:39 PM and the update operations be update all the elements in the range [a,b]
+9:39 PM → suhas joined (75c0fa14@gateway/web/freenode/ip.117.192.250.20)
+
+9:39 PM M<mohitreddy1996> mohit reddy 
+So yeah they could be random
+9:39 PM i mean no specific order of updates or queries.
+9:40 PM How can we do it?
+9:40 PM brute force solution?
+9:40 PM any one?
+9:40 PM → arvind_ joined (~arvind@122.167.246.129)
+
+9:41 PM M<mohitreddy1996> mohit reddy 
+let it be wrong.. But any ideas..
+9:44 PM okay 
+9:44 PM So brute force solution can be 
+9:45 PM just update the partition whenever an update is required 
+9:45 PM worst case O(n) per update
+9:45 PM and query search for the max element in O(n) worst case
+9:45 PM say if there are 10^6 queries/updates
+9:45 PM TLE!
+9:45 PM So better approach 
+9:45 PM use Segment trees.
+9:47 PM basic steps in segment trees.
+9:47 PM 1) Build the tree.
+9:47 PM how does the tree look like?
+9:47 PM All the elements are present at the leaf nodes.
+9:48 PM So the basic idea of segment trees is,
+9:48 PM say we have two leaf nodes.
+9:49 PM obviously they will be adjacent to each other
+9:49 PM say i have 4 elements 
+9:49 PM the tree will look like this.
+9:49 PM    1
+9:49 PM 2    3
+9:49 PM 4 5 6 7
+9:49 PM where [4,7] will be your array elements
+9:49 PM And 2 is the parent of 4 and 5
+9:49 PM and 3 is the parent of 6 and 7
+9:50 PM 1 is the parent of 2 and 3
+9:50 PM yeah segment trees are binary trees.
+9:51 PM the value in the node 2 will be max of 4 and 5
+9:51 PM here max is nothing but what we discussed in the problem statement.
+9:51 PM similar 3 will store the maximum of 6 and 7.
+9:53 PM ⇐ shamitha quit (ab4e8aa1@gateway/web/freenode/ip.171.78.138.161) Ping timeout: 250 seconds
+
+9:54 PM M<mohitreddy1996> mohit reddy 
+and 1 will take care of 2 and 3
+9:54 PM So i have an array with 4 elements : 
+9:54 PM 3 2 6 7
+9:55 PM So the node - value table will look like this
+9:55 PM 4 - 3
+9:55 PM 5 - 2
+9:55 PM 6-6
+9:55 PM 7 -7 
+9:55 PM 2 = max of node 4 and 5
+9:55 PM 2 - 3
+9:55 PM 3 = max of node 6 and 7
+9:55 PM 7
+9:55 PM → shamitha joined (6ac6749a@gateway/web/freenode/ip.106.198.116.154)
+
+9:55 PM M<mohitreddy1996> mohit reddy 
+1 = max of 2 and 3
+9:55 PM 1 - 7
+9:56 PM and the intervals which each node takes care of 
+9:56 PM or say segment which each node takes care of
+9:56 PM 4 - [0]
+9:56 PM 5 - [1]
+9:56 PM 6 - [2]
+9:56 PM 7 - [3]
+9:56 PM 2 - [0,1]
+9:56 PM 3 - [2,3]
+9:56 PM 1 - [0,3]
+9:57 PM understood?
+9:57 PM → gauthm joined (3b58c11e@gateway/web/freenode/ip.59.88.193.30)
+
+9:57 PM M<mohitreddy1996> mohit reddy 
+anyone? any replies?
